@@ -60,10 +60,10 @@ fun Analytics.manuallyEnableDestination(plugin: DestinationPlugin) {
             System.AddDestinationToSettingsAction(destinationKey = plugin.key),
             System::class
         )
-        // Differs from swift, bcos kotlin can store `enabled` state. ref: https://git.io/J1bhJ
-        // finding it in timeline rather than using the ref that is provided to cover our bases
-        find(plugin::class)?.enabled = true
     }
+    // Differs from swift, bcos kotlin can store `enabled` state. ref: https://git.io/J1bhJ
+    // finding it in timeline rather than using the ref that is provided to cover our bases
+    find(plugin::class)?.enabled = true
 }
 
 
